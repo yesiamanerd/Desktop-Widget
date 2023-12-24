@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="date=no">
+    <link rel="stylesheet" type="text/css" href="blue-theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="column" id="timer-and-reading-column">
+        <!-- Timer Utility Container -->
+        <div class="timer-utility">
+            <!-- Content for timer utility -->
+        </div>
+        <div class="current-reading">
+            <!-- Content for current reading -->
+        </div>
+    </div>
+    <div class="column" id="todo-list-column">
+        <div class="todo-list-header">
+<!--            <div class="scroll-top">-->
+<!--                <a id="scroll-top" href=""><span class="hop">screen</span> top</a>-->
+<!--            </div>-->
+<!--            <div class="left-frame-top">-->
+<!--                <div class="panel-1"><a href="">LCARS</a></div>-->
+<!--                <div class="panel-2">02<span class="hop">-262000</span></div>-->
+<!--            </div>-->
+<!--            <div class="right-frame-top">-->
+<!--                <div class="banner">-->
+<!--                    LCARS &#149; Online-->
+<!--                </div>-->
+<!--                <div id="date-time" class="content">Loading...</div>-->
+<!--                <div id="stardate" class="content">Stardate...</div>-->
+<!--                <div class="data-cascade-button-group">-->
+<!--                    <div class="cascade-wrapper">-->
+<!--                        <div class="data-cascade" id="default">-->
+<!--                            <div class="row-1">-->
+<!--                                <div class="dc1">101</div>-->
+<!--                                <div class="dc2">7109</div>-->
+<!--                                <div class="dc3">1966</div>-->
+<!--                                <div class="dc4">1222</div>-->
+<!--                            </div>-->
+<!--                            <div class="row-2">-->
+<!--                                <div class="dc3">1987</div>-->
+<!--                                <div class="dc1">102</div>-->
+<!--                                <div class="dc2">8102</div>-->
+<!--                                <div class="dc4">044</div>-->
+<!--                            </div>-->
+<!--                            <div class="row-3">-->
+<!--                                <div class="dc1">103</div>-->
+<!--                                <div class="dc4">0222</div>-->
+<!--                                <div class="dc2">714</div>-->
+<!--                                <div class="dc3">1993</div>-->
+<!--                            </div>-->
+<!--                            <div class="row-4">-->
+<!--                                <div class="dc3">1995</div>-->
+<!--                                <div class="dc1">104</div>-->
+<!--                                <div class="dc4">322</div>-->
+<!--                                <div class="dc2">6104</div>-->
+<!--                            </div>-->
+<!--                            <div class="row-5">-->
+<!--                                <div class="dc1">105</div>-->
+<!--                                <div class="dc2">08</div>-->
+<!--                                <div class="dc3">2001</div>-->
+<!--                                <div class="dc4">713</div>-->
+<!--                            </div>-->
+<!--                            <div class="row-6">-->
+<!--                                <div class="dc1">106</div>-->
+<!--                                <div class="dc2">31</div>-->
+<!--                                <div class="dc3">2017</div>-->
+<!--                                <div class="dc4">429</div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="button-col">-->
+<!--                        <div class="button" id="top-left"><a href="#" onclick="openBrowserWithTabs()">BOOKS</a>-->
+<!--                        </div>-->
+<!--                        <div class="button" id="bottom-left"><a href="">STEAM</a></div>-->
+<!--                    </div>-->
+<!--                    <div class="button-col">-->
+<!--                        <div class="button" id="top-right"><a href="">EPIC</a></div>-->
+<!--                        <div class="button" id="bottom-right"><a href="">PRIME</a></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="runner">-->
+<!--                    <div class="top-corner-bg">-->
+<!--                        <div class="top-corner"></div>-->
+<!--                    </div>-->
+<!--                    <div class="block-2"></div>-->
+<!--                    <div class="block-3"></div>-->
+<!--                    <div class="block-4">-->
+<!--                        <div class="block-4-floatbar"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="bar-panel">-->
+<!--                    <div class="bar-1"></div>-->
+<!--                    <div class="bar-2"></div>-->
+<!--                    <div class="bar-3"></div>-->
+<!--                    <div class="bar-4">-->
+<!--                        <div class="bar-4-inside"></div>-->
+<!--                    </div>-->
+<!--                    <div class="bar-5"></div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="todo-list" id="gap">-->
+<!--                <div class="left-frame">-->
+<!--                    <div>-->
+<!--                        <div class="panel-3">03<span class="hop">-111968</span></div>-->
+<!--                        <div class="panel-4">04<span class="hop">-041969</span></div>-->
+<!--                        <div class="panel-5">05<span class="hop">-1701D</span></div>-->
+<!--                        <div class="panel-6">06<span class="hop">-071984</span></div>-->
+<!--                        <div class="panel-7">07<span class="hop">-081940</span></div>-->
+<!--                        <div class="panel-8">08<span class="hop">-47148</span></div>-->
+<!--                        <div class="panel-9">09<span class="hop">-081966</span></div>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <div class="panel-10">10<span class="hop">-31</span></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="right-frame">-->
+<!--                    <div class="bar-panel">-->
+<!--                        <div class="bar-6"></div>-->
+<!--                        <div class="bar-7"></div>-->
+<!--                        <div class="bar-8"></div>-->
+<!--                        <div class="bar-9">-->
+<!--                            <div class="bar-9-inside"></div>-->
+<!--                        </div>-->
+<!--                        <div class="bar-10"></div>-->
+<!--                    </div>-->
+<!--                    <div class="runner">-->
+<!--                        <div class="corner-bg">-->
+<!--                            <div class="corner"></div>-->
+<!--                        </div>-->
+<!--                        <div class="block-2"></div>-->
+<!--                        <div class="block-3"></div>-->
+<!--                        <div class="block-4b">-->
+<!--                            <div class="block-4-floatbar"></div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+            </div>
+            <div class="todo-list-content">
+
+                <!-- Start your content here. -->
+
+                <h1>TODO</h1>
+
+                <h2>Chores to complete today</h2>
+
+                <p>Live long and prosper.</p>
+                <div class="button-col">
+                    <div class="chores-container">
+
+                        <div id="taskList">
+
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="footer-inside">
+                        <div class="footer-text">
+                            <div id="quote-of-the-day">Loading quote...</div>
+                        </div>
+                    </div>
+                    <div class="footer-panel">
+                        <span class="hop">22</span>47
+                    </div>
+                </footer>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Current Reading Container -->
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+

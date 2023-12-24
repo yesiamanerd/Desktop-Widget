@@ -1,0 +1,206 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow: hidden; /* Hide scrollbars */
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+#column-1 {
+    background-color: mediumpurple;
+    height: 100%;
+    width: 165px; /* Fixed width */
+}
+
+#column-2 {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    background-color: orange;
+    height: 100%;
+    width: 625px; /* Fixed width */
+}
+
+        #column-2-cell-1 {
+            background-color: lightblue; /* Different color for visibility */
+            flex-grow: 1; /* Each cell takes equal height */
+            width: 100%; /* Full width of the parent */
+        }
+
+        #column-2-cell-2 {
+            background-color: lightyellow; /* Different color for visibility */
+            height: 500px; /* Fixed height */
+            width: 100%;
+        }
+
+#column-3 {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    background-color: blue;
+    height: 100%;
+    width: 975px; /* Fixed width */
+}
+
+        #column-3-cell-1 {
+            background-color: darkblue; /* Different color for visibility */
+            display: flex; /* Enable flexbox */
+            height: 200px; /* Fixed height */
+            width: 100%;
+        }
+
+                #column-3-cell-1-col-1 {
+                    background-color: darkblue; /* Different color for visibility */
+                    width: 200px; /* Fixed width */
+                    height: 100%; /* Full height of the parent */
+                }
+
+                #column-3-cell-1-col-2 {
+                    background-color: skyblue; /* Different color for visibility */
+                    flex-grow: 1; /* Takes up remaining space */
+                    height: 100%; /* Full height of the parent */
+                }
+
+        #column-3-cell-2 {
+            background-color: gray; /* Different color for visibility */
+            flex-grow: 1; /* Each cell takes equal height */
+            width: 100%; /* Full width of the parent */
+        }
+        #column-3-cell-3 {
+            display: flex; /* Enable flexbox */
+            background-color: darkgreen; /* Different color for visibility */
+            height: 300px; /* Fixed height */
+            width: 100%;
+        }
+                #column-3-cell-3-col-1 {
+                    display: flex; /* Enable flexbox */
+                    flex-direction: column; /* Stack children vertically */
+                    background-color: darkblue; /* Different color for visibility */
+                    width: 500px; /* Fixed width */
+                    height: 100%; /* Full height of the parent */
+                }
+
+                        #column-3-cell-3-col-1-cell-1 {
+                            background-color: blue; /* Different color for visibility */
+                            flex-grow: 1; /* Adjust this value as needed */
+                        }
+
+                        #column-3-cell-3-col-1-cell-2 {
+                            background-color: purple; /* Different color for visibility */
+                            flex-grow: 1; /* Adjust this value as needed */
+                        }
+
+                #column-3-cell-3-col-2 {
+                    background-color: deeppink; /* Different color for visibility */
+                    flex-grow: 1; /* Takes up remaining space */
+                    height: 100%; /* Full height of the parent */
+                }
+
+
+#column-4 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 1675px; /* Fixed width */
+    /*background-color: yellow;*/
+}
+
+    #column-4-cell-1 {
+        display: flex; /* Enable flexbox */
+        flex-grow: 1; /* Take up available space */
+        width: 100%; /* Full width of the parent */
+        background-color: green; /* For visibility */
+    }
+
+        #column-4-cell-1-col-1 {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            background-color: lightgreen;
+            width: 50%;
+        }
+
+                #column-4-cell-1-col-1-subcell-1 {
+                    display: flex;
+                    background-color: lightblue; /* Different color for visibility */
+                    height: 400px; /* Fixed height */
+                    width: 100%;
+                }
+
+                        #column-4-cell-1-col-1-subcell-1-col-1 {
+                            display: flex;
+                            flex-direction: column; /* Stack children vertically */
+                            flex-grow: 1; /* Each sub-column takes equal width */
+                            background-color: green; /* Color for the first sub-column */
+                        }
+
+                                #column-4-cell-1-col-1-subcell-1-col-1-cell-1 {
+                                    background-color: green; /* Green for the top part */
+                                    flex-grow: 1; /* Take up half the space */
+                                }
+
+                                #column-4-cell-1-col-1-subcell-1-col-1-cell-2 {
+                                    background-color: orange; /* Orange for the bottom part */
+                                    flex-grow: 1; /* Take up half the space */
+                                }
+
+
+                        #column-4-cell-1-col-1-subcell-1-col-2 {
+                            display: flex;
+                            flex-direction: column; /* Stack children vertically */
+                            flex-grow: 1; /* Each sub-column takes equal width */
+                            background-color: orange; /* Color for the second sub-column */
+                        }
+
+                                #column-4-cell-1-col-1-subcell-1-col-2-cell-1 {
+                                    background-color: orange; /* Orange for the top part */
+                                    flex-grow: 1; /* Take up half the space */
+                                }
+
+                                #column-4-cell-1-col-1-subcell-1-col-2-cell-2 {
+                                    background-color: green; /* Green for the bottom part */
+                                    flex-grow: 1; /* Take up half the space */
+                                }
+
+
+
+                #column-4-cell-1-col-1-subcell-2 {
+                    background-color: lightcoral; /* Different color for visibility */
+                    flex-grow: 1; /* Takes up remaining space */
+                    width: 100%;
+                }
+
+        #column-4-cell-1-col-2 {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            background-color: darkgreen; /* Different color for visibility */
+            width: 50%;
+        }
+                #column-4-cell-1-col-2-subcell-1 {
+                    background-color: purple; /* Different color for visibility */
+                    height: 400px; /* Fixed height */
+                    width: 100%;
+                }
+
+
+                #column-4-cell-1-col-2-subcell-2 {
+                    background-color: lavender; /* Different color for visibility */
+                    flex-grow: 1; /* Takes up remaining space */
+                    width: 100%;
+                }
+
+    #column-4-cell-2 {
+        background-color: red;
+        height: 150px;
+        width: 100%
+    }

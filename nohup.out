@@ -1,0 +1,121 @@
+
+> desktop-widget@1.0.0 start
+> electron .
+
+
+/c/Program Files/nodejs/npm: line 64:  1739 Hangup                  "$NODE_EXE" "$NPM_CLI_JS" "$@"
+
+> desktop-widget@1.0.0 start
+> electron .
+
+
+/c/Program Files/nodejs/npm: line 64:  2038 Hangup                  "$NODE_EXE" "$NPM_CLI_JS" "$@"
+
+> desktop-widget@1.0.0 start
+> electron .
+
+
+
+
+
+
+[17508:1222/145533.516:ERROR:network_service_instance_impl.cc(601)] Network service crashed, restarting service.
+
+[21652:1222/145803.886:ERROR:network_service_instance_impl.cc(601)] Network service crashed, restarting service.
+
+[13872:1222/150007.206:ERROR:gpu_process_host.cc(993)] GPU process exited unexpectedly: exit_code=1
+[13872:1222/150009.958:ERROR:network_service_instance_impl.cc(601)] Network service crashed, restarting service.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[25112:1223/222254.259:ERROR:CONSOLE(1)] "Uncaught (in promise) TypeError: Failed to fetch", source: devtools://devtools/bundled/panels/elements/elements.js (1)
+[25112:1223/222300.283:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+[25112:1223/222301.549:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+[25112:1223/222302.567:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+[25112:1223/222309.405:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+[25112:1223/222332.789:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+[25112:1223/222340.147:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+
+[21124:1223/222817.432:ERROR:CONSOLE(1)] "Uncaught (in promise) TypeError: Failed to fetch", source: devtools://devtools/bundled/panels/elements/elements.js (1)
+[21124:1223/222824.984:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+[21124:1223/222826.535:ERROR:CONSOLE(0)] "ReferenceError: dragEvent is not defined", source:  (0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[12688:1224/094701.372:ERROR:gpu_process_host.cc(993)] GPU process exited unexpectedly: exit_code=1
+
+
+
