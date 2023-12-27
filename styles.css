@@ -1,3 +1,22 @@
+@font-face {
+    font-family: 'Antonio';
+    src: url('fonts/Antonio-Regular.woff2') format('woff2'),
+    url('fonts/Antonio-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Antonio';
+    src: url('fonts/Antonio-Bold.woff2') format('woff2'),
+    url('fonts/Antonio-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+
 body, html {
     height: 100%;
     width: 100%;
@@ -77,33 +96,48 @@ body, html {
         }
         #column-3-cell-3 {
             display: flex; /* Enable flexbox */
-            background-color: darkgreen; /* Different color for visibility */
+            background-color: black; /* Different color for visibility */
             height: 300px; /* Fixed height */
             width: 100%;
         }
                 #column-3-cell-3-col-1 {
                     display: flex; /* Enable flexbox */
                     flex-direction: column; /* Stack children vertically */
-                    background-color: darkblue; /* Different color for visibility */
-                    width: 500px; /* Fixed width */
+                    /*background-color: darkblue; !* Different color for visibility *!*/
+                    width: 485px; /* Fixed width */
                     height: 100%; /* Full height of the parent */
                 }
 
                         #column-3-cell-3-col-1-cell-1 {
-                            background-color: blue; /* Different color for visibility */
+                            /*background-color: blue; !* Different color for visibility *!*/
                             flex-grow: 1; /* Adjust this value as needed */
+                            max-width: 485px;
                         }
 
                         #column-3-cell-3-col-1-cell-2 {
-                            background-color: purple; /* Different color for visibility */
+                            /*background-color: purple; !* Different color for visibility *!*/
                             flex-grow: 1; /* Adjust this value as needed */
+                            max-width: 485px;
                         }
 
                 #column-3-cell-3-col-2 {
-                    background-color: deeppink; /* Different color for visibility */
-                    flex-grow: 1; /* Takes up remaining space */
+                    display: flex; /* Enable flexbox */
+                    flex-direction: column; /* Stack children vertically */
+                    /*background-color: darkblue; !* Different color for visibility *!*/
+                    width: 485px; /* Fixed width */
                     height: 100%; /* Full height of the parent */
                 }
+                        #column-3-cell-3-col-2-cell-1 {
+                            /*background-color: blue; !* Different color for visibility *!*/
+                            flex-grow: 1; /* Adjust this value as needed */
+                            max-width: 485px;
+                        }
+
+                        #column-3-cell-3-col-2-cell-2 {
+                            /*background-color: purple; !* Different color for visibility *!*/
+                            flex-grow: 1; /* Adjust this value as needed */
+                            max-width: 485px;
+                        }
 
 
 #column-4 {
@@ -131,7 +165,6 @@ body, html {
 
                 #column-4-cell-1-col-1-subcell-1 {
                     display: flex;
-                    background-color: lightblue; /* Different color for visibility */
                     height: 400px; /* Fixed height */
                     width: 100%;
                 }
@@ -140,16 +173,17 @@ body, html {
                             display: flex;
                             flex-direction: column; /* Stack children vertically */
                             flex-grow: 1; /* Each sub-column takes equal width */
-                            background-color: green; /* Color for the first sub-column */
+                            background-color: black; /* Different color for visibility */
+                            position: relative;
                         }
 
                                 #column-4-cell-1-col-1-subcell-1-col-1-cell-1 {
-                                    background-color: green; /* Green for the top part */
+                                    /*background-color: green; !* Green for the top part *!*/
                                     flex-grow: 1; /* Take up half the space */
                                 }
 
                                 #column-4-cell-1-col-1-subcell-1-col-1-cell-2 {
-                                    background-color: orange; /* Orange for the bottom part */
+                                    /*background-color: orange; !* Orange for the bottom part *!*/
                                     flex-grow: 1; /* Take up half the space */
                                 }
 
@@ -158,49 +192,522 @@ body, html {
                             display: flex;
                             flex-direction: column; /* Stack children vertically */
                             flex-grow: 1; /* Each sub-column takes equal width */
-                            background-color: orange; /* Color for the second sub-column */
+                            background-color: black; /* Color for the second sub-column */
                         }
 
                                 #column-4-cell-1-col-1-subcell-1-col-2-cell-1 {
-                                    background-color: orange; /* Orange for the top part */
+                                    /*background-color: orange; !* Orange for the top part *!*/
                                     flex-grow: 1; /* Take up half the space */
                                 }
 
                                 #column-4-cell-1-col-1-subcell-1-col-2-cell-2 {
-                                    background-color: green; /* Green for the bottom part */
+                                    /*background-color: green; !* Green for the bottom part *!*/
                                     flex-grow: 1; /* Take up half the space */
                                 }
 
 
 
                 #column-4-cell-1-col-1-subcell-2 {
-                    background-color: lightcoral; /* Different color for visibility */
+                    background-color: black; /* Different color for visibility */
                     flex-grow: 1; /* Takes up remaining space */
                     width: 100%;
+                    position: relative;
                 }
 
         #column-4-cell-1-col-2 {
             display: flex;
             flex-direction: column;
             flex-grow: 1;
-            background-color: darkgreen; /* Different color for visibility */
+            background-color: black; /* Different color for visibility */
             width: 50%;
         }
                 #column-4-cell-1-col-2-subcell-1 {
-                    background-color: purple; /* Different color for visibility */
+                    /*background-color: purple; !* Different color for visibility *!*/
                     height: 400px; /* Fixed height */
                     width: 100%;
                 }
 
 
                 #column-4-cell-1-col-2-subcell-2 {
-                    background-color: lavender; /* Different color for visibility */
+                    background-color: black; /* Different color for visibility */
                     flex-grow: 1; /* Takes up remaining space */
                     width: 100%;
                 }
 
     #column-4-cell-2 {
-        background-color: red;
+        background-color: black;
         height: 150px;
         width: 100%
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************/
+/**                                               **/
+/**     UPPER LEFT CORNER - THICK BLUE BORDER     **/
+/**                                               **/
+/***************************************************/
+
+/* Container for the upper left corner */
+.upper-left-corner {
+    position: relative; /* Allows absolute positioning inside */
+    /* Set dimensions or other properties as needed */
+}
+
+
+/* Horizontal blue bar */
+.upper-left-corner .top-horizontal-bar {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 200px; /* Offset by the width of the vertical bar */
+    width: 600px; /* Remaining width */
+    height: 20px; /* Height of the horizontal bar */
+    background: #005cc5;
+    /* Other styles as needed */
+}
+
+/* Horizontal blue bar */
+.upper-left-corner .top-horizontal-bar-fill-1 {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 805px; /* Offset by the width of the vertical bar */
+    width: 50px; /* Remaining width */
+    height: 20px; /* Height of the horizontal bar */
+    background: #fc9;
+    /* Other styles as needed */
+}
+
+.upper-left-corner .top-horizontal-bar-fill-2 {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 860px; /* Offset by the width of the vertical bar */
+    width: 200px; /* Remaining width */
+    height: 10px; /* Height of the horizontal bar */
+    background: #def;
+    /* Other styles as needed */
+}
+
+.upper-left-corner .top-horizontal-bar-fill-3 {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 1065px; /* Offset by the width of the vertical bar */
+    width: 610px; /* Remaining width */
+    height: 20px; /* Height of the horizontal bar */
+    background: #005cc5;
+    /* Other styles as needed */
+}
+
+
+/* Vertical blue bar */
+.upper-left-corner .top-vertical-bar {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 200px; /* Width of the vertical bar */
+    height: 200px; /* Full height of the parent container */
+    background: #005cc5;
+    border-radius: 100px 0 0 0; /* Curve the bottom-left corner */
+}
+
+/* Create the blue square */
+.upper-left-corner .top-inner-corner {
+    position: absolute;
+    top: 25px;
+    left: 205px;
+    width: 60px;
+    height: 60px;
+    background: #005cc5;
+    z-index: 2;
+}
+
+/* Overlay the curved black square */
+.upper-left-corner .top-inner-corner::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: black;
+    border-radius: 60px 0 0 0;
+    z-index: 3;
+}
+
+
+/***************************************************/
+/**                                               **/
+/**     MIDDLE LEFT SIDE - THICK BORDER     **/
+/**                                               **/
+/***************************************************/
+
+/* Container for the upper left corner */
+.middle-left-side {
+    position: relative; /* Allows absolute positioning inside */
+    /* Set dimensions or other properties as needed */
+}
+
+/* Vertical blue bar */
+.middle-left-side .middle-left-bar-1 {
+    content: '';
+    position: absolute;
+    top: 210px;
+    left: 5px;
+    width: 200px; /* Width of the vertical bar */
+    height: 150px; /* Full height of the parent container */
+    background: #005cc5;
+}
+
+/* Vertical blue bar */
+.middle-left-side .middle-left-bar-2{
+    content: '';
+    position: absolute;
+    top: 365px;
+    left: 5px;
+    width: 200px; /* Width of the vertical bar */
+    height: 160px; /* Full height of the parent container */
+    background: #005cc5 ;
+}
+
+/* Vertical blue bar */
+.middle-left-side .middle-left-bar-3 {
+    content: '';
+    position: absolute;
+    top: 530px;
+    left: 5px;
+    width: 200px; /* Width of the vertical bar */
+    height: 150px; /* Full height of the parent container */
+    background: #8bf;
+}
+
+/*These are aligned from the bottom of the cell*/
+.middle-left-side .middle-left-bar-4 {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    /*width: 200px; !* Width of the vertical bar *!*/
+    /*height: 150px; !* Full height of the parent container *!*/
+    width: 200px; /* Width of the vertical bar */
+    height: 225px; /* Full height of the parent container */
+    background: tan;
+}
+
+/***************************************************/
+/**                                               **/
+/**     BOTTOM LEFT CORNER - THICK BLUE BORDER     **/
+/**                                               **/
+/***************************************************/
+
+/* Container for the upper left corner */
+.bottom-left-corner {
+    position: absolute; /* Allows absolute positioning inside */
+    bottom: 0;
+    left: 0;
+}
+
+
+/* Horizontal blue bar */
+.bottom-left-corner .bottom-horizontal-bar {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 200px; /* Offset by the width of the vertical bar */
+    width: 600px; /* Remaining width */
+    height: 20px; /* Height of the horizontal bar */
+    background: #005cc5;
+    /* Other styles as needed */
+}
+
+/* Horizontal blue bar */
+.bottom-left-corner .bottom-horizontal-bar-fill-1 {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 805px; /* Offset by the width of the vertical bar */
+    width: 50px; /* Remaining width */
+    height: 20px; /* Height of the horizontal bar */
+    background: #f74;
+    /* Other styles as needed */
+}
+
+.bottom-left-corner .bottom-horizontal-bar-fill-2 {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 860px; /* Offset by the width of the vertical bar */
+    width: 200px; /* Remaining width */
+    height: 20px; /* Height of the horizontal bar */
+    background: #8bf;
+    /* Other styles as needed */
+}
+
+.bottom-left-corner .bottom-horizontal-bar-fill-3 {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 1065px; /* Offset by the width of the vertical bar */
+    width: 610px; /* Remaining width */
+    height: 20px; /* Height of the horizontal bar */
+    background: #11e;
+    /* Other styles as needed */
+}
+
+/* Vertical blue bar */
+.bottom-left-corner .bottom-vertical-bar {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 200px; /* Width of the vertical bar */
+    height: 200px; /* Full height of the parent container */
+    background: #005cc5;
+    border-radius:  0 0 0 100px; /* Curve the bottom-left corner */
+    /* Other styles as needed */
+}
+
+
+
+/* Create the blue square */
+.bottom-left-corner .bottom-inner-corner {
+    position: absolute;
+    bottom: 25px;
+    left: 205px;
+    width: 60px;
+    height: 60px;
+    background: #005cc5;
+    z-index: 2;
+}
+
+/* Overlay the curved black square */
+.bottom-left-corner .bottom-inner-corner::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: black;
+    border-radius:  0 0 0 60px;
+    z-index: 3;
+}
+
+.wrap p {
+    position: absolute; /* Position the <p> tag absolutely within the container */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    margin: 0; /* Remove any default margin */
+    font-family: 'Antonio', sans-serif; /* Use Antonio font */
+    font-weight: bold; /* Make text bold */
+    color: #000000; /* Set text color, change as needed */
+    padding: 5px; /* Add some padding around the text */
+    text-align: right; /* Align text to the right */
+}
+
+
+
+:root {
+    /* Color Palette */
+    --deep-blue: #11e;
+    --medium-blue: #26f;
+    --light-blue: #58f;
+    --black: #000;
+    --another-shade-of-blue: #25f;
+    --soft-red: #c66;
+    --sky-blue: #8bf;
+    --dark-red: #c23;
+    --light-grey: #def;
+    --bright-orange: #f83;
+    --pale-yellow: #fc9;
+    --pinkish-red: #f74;
+    --dark-red-2: #600;
+    --vivid-red: #f20;
+    --soft-blue: #ccdeff;
+    --beige: #ca8;
+    --dark-grey: #444a77;
+    --olive-green: #9d6;
+}
+
+/********************************************************************************/
+/********************************************************************************/
+/**                                                                            **/
+/**                               STYLES FOR WIDGETS                           **/
+/**                                                                            **/
+/********************************************************************************/
+/********************************************************************************/
+
+/***************************************************/
+/**                                               **/
+/**             AUDIOBOOK MANAGER                 **/
+/**                                               **/
+/***************************************************/
+
+#manage-audiobooks-btn, #spotify-login-btn {
+    /* Styling for the oval/pill-shaped button */
+    position: relative;
+    /*top: 50px;*/
+    border-radius: 50px;
+    padding:  20px 80px;
+    background-color: #58f;
+    color: black;
+    border: none;
+    cursor: pointer;
+    /* Center the button */
+    display: block;
+    margin: 10px auto;
+    font-family: 'Antonio', sans-serif; /* Use Antonio font */
+    font-weight: bold; /* Make text bold */
+    text-align: center; /* Center the text */
+}
+
+/* Style for the Audiobook Management Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 4; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    /* existing styles */
+    font-family: 'Antonio', sans-serif; /* Use Antonio font */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add shadow for better appearance */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* The Close Button */
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style for the Audiobook Management Modal */
+#audiobook-manage-modal .modal-content {
+    background-color: #58f;
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 600px; /* Adjust as necessary for your layout */
+}
+
+/* The Close Button */
+#audiobook-manage-modal .close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#audiobook-manage-modal .close-btn:hover,
+#audiobook-manage-modal .close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style for the "Remove Selected" button */
+#remove-selected-btn {
+    background-color: #f44336; /* Red color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 200px;
+}
+
+/* Style for the Add Audiobook area */
+#add-audiobook-area {
+    display: none; /* Hidden by default, shown via JavaScript */
+}
+
+#add-audiobook-area textarea {
+    width: 578px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    font-family: 'Antonio', sans-serif;
+}
+
+#audiobook-link-input textarea {
+    width: 578px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    font-family: 'Antonio', sans-serif;
+}
+
+#add-audiobook-btn {
+    width: 200px;
+}
+
+#add-audiobook-area #add-audiobook-btn {
+    background-color: #4CAF50; /* Green color for add button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style for individual audiobook items in the list */
+#audiobook-list li {
+    background: #f1f1f1; /* Light grey background */
+    margin-bottom: 8px; /* Space between items */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners for list items */
+    display: flex;
+    align-items: center;
+}
+
+/* Style for audiobook checkboxes */
+.audiobook-checkbox {
+    margin-right: 8px;
+}
+
+/* Style for the iframe within the list items */
+#audiobook-list iframe {
+    flex-grow: 1; /* Allow iframe to fill the space */
+    margin-left: 10px; /* Space between checkbox and iframe */
+}

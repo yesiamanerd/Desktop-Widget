@@ -4,3 +4,5 @@ build/
 /node_modules/
 /.idea/
 .idea/
+/assets/
+spotifyCredentials.json
