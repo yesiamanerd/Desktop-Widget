@@ -6,3 +6,4 @@ build/
 .idea/
 /assets/
 spotifyCredentials.json
+nohup.out

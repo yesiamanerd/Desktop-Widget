@@ -27,7 +27,7 @@ function createWindow() {
   mainWindow.setVisibleOnAllWorkspaces(true);
   mainWindow.setFullScreenable(false);
   mainWindow.loadFile('index.html');
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 }
 
 

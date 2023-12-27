@@ -62,7 +62,7 @@ function refreshAccessToken(refreshToken) {
         console.log(`Sending access token refresh request to Spotify...`); // Log request send
         let body = '';
         res.on('data', (d) => body += d);
-        res.on('end', () => {
+        res.on('end', async () => {
             console.log(`Access token refresh response: ${body}`); // Log the response body
             const response = JSON.parse(body);
             await localStorage.setItem('spotifyAccessToken', response.access_token);
@@ -71,6 +71,7 @@ function refreshAccessToken(refreshToken) {
             // Schedule next refresh
             const expiresIn = response.expires_in; // Time in seconds
             setTimeout(() => {
+                refreshAccessToken(refreshToken);
                 refreshAccessToken(refreshToken);
             }, expiresIn * 1000 - 60000); // Refresh 1 minute before expiry
 
