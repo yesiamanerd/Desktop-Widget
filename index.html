@@ -51,7 +51,7 @@
                     <div class="wrap">
 
                         <button id="manage-audiobooks-btn">Manage Audiobooks</button>
-<!--                        <button id="spotify-login-btn">Login with Spotify</button>-->
+                        <button id="search-spotify-btn">Search Spotify</button>
                         <!-- Audiobook Embeds Here -->
                     </div>
                     <!-- Audiobook Management Modal -->
@@ -84,9 +84,22 @@
                         </div>
                     </div>
 
+                    <!-- Search Spotify Modal -->
+                    <div id="search-spotify-modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn">&times;</span>
+                            <h2>Search Spotify for Audiobooks</h2>
+                            <div class="search-modal">
+                                <input type="text" id="author-name" class="search-input" placeholder="Enter author's name">
+                                <input type="text" id="book-title" class="search-input" placeholder="Enter audiobook title">
+                                <button id="search-button" class="search-button">Search</button>
+                            </div>
+                            <div id="search-results" class="results-container">
+                                <!-- Search results will be injected here -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-
             </div>
         </div>
     </div>

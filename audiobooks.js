@@ -168,40 +168,142 @@ span.onclick = function() {
 }
 
 
+async function searchForAudiobook(author, title) {
+    const accessToken = await localStorage.getItem('spotifyAccessToken'); // Retrieve the access token
+
+    // Build the query based on the provided author and/or title
+    let query = '';
+    if (author) query += `author:${encodeURIComponent(author)}`;
+    if (author && title) query += ' ';
+    if (title) query += `name:${encodeURIComponent(title)}`;
+
+    // Append the type audiobook to the search query
+    query += `&type=audiobook`;
+
+    const searchUrl = `https://api.spotify.com/v1/search?q=${query}&market=US&limit=20`;
+
+    const searchOptions = {
+        method: 'GET',
+        headers: { 'Authorization': `Bearer ${accessToken}` }
+    };
+
+    try {
+        console.log(searchUrl);
+        const response = await fetch(searchUrl, searchOptions);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log(data);
+        // Assuming audiobooks are what you want and available in the response
+        displaySearchResults(data.audiobooks.items);
+    } catch (error) {
+        console.error('Error fetching search results:', error);
+        // Handle errors, such as by displaying a message to the user
+    }
+}
+
+function displaySearchResults(items) {
+    const resultsContainer = document.getElementById('search-results');
+    resultsContainer.innerHTML = ''; // Clear previous results
+
+    if (!items || items.length === 0) {
+        resultsContainer.textContent = 'No audiobooks found.';
+        resultsContainer.style.display = 'block';
+        return;
+    }
+
+    items.forEach(item => {
+        const button = document.createElement('button');
+        button.textContent = `${item.name} by ${item.authors.map(author => author.name).join(', ')}`;
+        button.classList.add('manage-audiobooks-btn');
+        // Create an img element for the cover
+        const img = document.createElement('img');
+        img.src = item.images[0].url; // Assuming the first image is the cover thumbnail
+        img.alt = `Cover of ${item.name}`;
+        img.style.position = 'absolute';
+        img.style.left = '10px'; // Adjust as needed
+        img.style.top = '50%';
+        img.style.transform = 'translateY(-50%)';
+        img.style.width = '60px'; // Adjust as needed
+        img.style.height = '60px'; // Adjust as needed
+        img.style.paddingLeft = '20px';
+        button.appendChild(img);
+        button.addEventListener('click', () => {
+            selectAudiobook(item);
+        });
+        resultsContainer.appendChild(button);
+    });
+    resultsContainer.style.display = 'block';
+    resultsContainer.style.backgroundColor = '#00007f';
+    resultsContainer.style.border = '2px solid #ffcc00';
+    resultsContainer.style.padding = '40px';
+    resultsContainer.style.borderRadius = '10px';
+
+}
+
+
+function selectAudiobook(item) {
+    // Implement functionality to handle audiobook selection
+    console.log('Selected audiobook:', item.name);
+}
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
 // Load audiobooks when the app starts
-loadAudiobooks();
+    loadAudiobooks();
 
 // Set up event listeners for the modal
-document.getElementById('manage-audiobooks-btn').addEventListener('click', function() {
-    audiobookModal.style.display = "block";
-    updateAudiobookList(); // Update the list whenever the modal is opened
-});
+    document.getElementById('manage-audiobooks-btn').addEventListener('click', function () {
+        audiobookModal.style.display = "block";
+        updateAudiobookList(); // Update the list whenever the modal is opened
+    });
 
-document.getElementsByClassName("close-btn")[0].onclick = function() {
-    audiobookModal.style.display = "none";
-}
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target === audiobookModal) {
+    document.getElementsByClassName("close-btn")[0].onclick = function () {
         audiobookModal.style.display = "none";
     }
-}
-
-document.getElementById('add-audiobook-btn').addEventListener('click', function(event) {
-    event.preventDefault();
-    const embedLink = document.getElementById('audiobook-link-input').value;
-    if (embedLink) {
-        addAudiobook(embedLink);
-        document.getElementById('audiobook-link-input').value = ''; // Clear the input field
-        updateAudiobookList();
-    } else {
-        console.log('No embed link provided.');
+// When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target === audiobookModal) {
+            audiobookModal.style.display = "none";
+        }
     }
-});
+
+    document.getElementById('add-audiobook-btn').addEventListener('click', function (event) {
+        event.preventDefault();
+        const embedLink = document.getElementById('audiobook-link-input').value;
+        if (embedLink) {
+            addAudiobook(embedLink);
+            document.getElementById('audiobook-link-input').value = ''; // Clear the input field
+            updateAudiobookList();
+        } else {
+            console.log('No embed link provided.');
+        }
+    });
 
 // Add event listener for the "Remove Selected" button
-document.getElementById('remove-selected-btn').addEventListener('click', removeSelectedAudiobooks);
+    document.getElementById('remove-selected-btn').addEventListener('click', removeSelectedAudiobooks);
 
-document.getElementById('spotify-login-btn').addEventListener('click', () => {
-    window.electronAPI.openAuthWindow();
+
+    document.getElementById('search-spotify-btn').addEventListener('click', function() {
+        // Display the search modal
+        const searchModal = document.getElementById('search-spotify-modal');
+        searchModal.style.display = "block";
+    });
+
+// Event listener for closing the modal
+    document.querySelector('#search-spotify-modal .close-btn').addEventListener('click', function() {
+        const searchModal = document.getElementById('search-spotify-modal');
+        searchModal.style.display = "none";
+    });
+
+// Event listener for submitting the search
+    document.getElementById('search-button').addEventListener('click', function() {
+        const author = document.getElementById('author-name').value.trim();
+        const title = document.getElementById('book-title').value.trim();
+        searchForAudiobook(author, title);
+    });
+
+
 });

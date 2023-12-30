@@ -559,7 +559,7 @@ body, html {
 /**                                               **/
 /***************************************************/
 
-#manage-audiobooks-btn, #spotify-login-btn {
+#manage-audiobooks-btn, #search-spotify-btn {
     /* Styling for the oval/pill-shaped button */
     position: relative;
     /*top: 50px;*/
@@ -569,12 +569,39 @@ body, html {
     color: black;
     border: none;
     cursor: pointer;
+    width: 250px;
     /* Center the button */
     display: block;
     margin: 10px auto;
     font-family: 'Antonio', sans-serif; /* Use Antonio font */
     font-weight: bold; /* Make text bold */
     text-align: center; /* Center the text */
+}
+
+.results-container {
+    background-color: #58f;
+    display: none; /* Initially hide the container */
+}
+
+.manage-audiobooks-btn {
+    /* Styling for the oval/pill-shaped button */
+    display: flex; /* Use flexbox for internal alignment */
+    align-items: center; /* Vertically center all items in the button */
+    justify-content: flex-start; /* Align items to the start of the button */
+    border-radius: 50px;
+    padding: 10px 80px; /* Adjust padding as necessary */
+    padding-left: 100px;
+    background-color: #58f;
+    color: black;
+    border: none;
+    cursor: pointer;
+    width: 470px;
+    height: 75px; /* Fixed height, consider removing or adjusting if content does not fit */
+    margin: 10px 10px;
+    font-family: 'Antonio', sans-serif; /* Use Antonio font */
+    font-weight: bold; /* Make text bold */
+    text-align: left; /* Text alignment is handled by flexbox now */
+    position: relative; /* Keep if you need it for positioning */
 }
 
 /* Style for the Audiobook Management Modal */
@@ -635,6 +662,8 @@ body, html {
     font-size: 28px;
     font-weight: bold;
 }
+
+
 
 #audiobook-manage-modal .close-btn:hover,
 #audiobook-manage-modal .close-btn:focus {
@@ -711,3 +740,116 @@ body, html {
     flex-grow: 1; /* Allow iframe to fill the space */
     margin-left: 10px; /* Space between checkbox and iframe */
 }
+
+
+
+/***************************************************/
+/**                                               **/
+/**             AUDIOBOOK SEARCH                 **/
+/**                                               **/
+/***************************************************/
+/* Style for the Search Spotify Modal */
+#search-spotify-modal .modal-content {
+    background-color: #58f;
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 600px; /* Adjust as necessary for your layout */
+}
+
+/* The Close Button */
+#search-spotify-modal .close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#search-spotify-modal .close-btn:hover,
+#search-spotify-modal .close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style for the search results container */
+#search-results {
+    max-height: 300px; /* Maximum height before scrollbar appears */
+    overflow-y: auto; /* Enable vertical scrollbar */
+    margin-top: 10px; /* Space above the results */
+    padding: 5px; /* Padding inside the results container */
+    border: 1px solid #ccc; /* Border around the results */
+    background-color: #fff; /* Background color for the results */
+}
+
+#search-results {
+    min-height: 100px; /* This sets a minimum height */
+    background-color: #f3f3f3; /* A light grey background for visibility */
+    border: 1px solid #ddd; /* A subtle border */
+    margin-top: 10px; /* Some space above the results */
+    padding: 10px; /* Some internal spacing */
+    overflow-y: auto; /* Allows for scrolling if content overflows */
+}
+
+#search-results li {
+    padding: 5px 0; /* Adds some vertical padding to each list item for better readability */
+    border-bottom: 1px solid #eee; /* Adds a subtle separator between items */
+}
+
+#search-results li:last-child {
+    border-bottom: none; /* Removes the border from the last item for cleanliness */
+}
+
+/* Apply the LCARS theme to the search modal */
+.search-modal {
+    background-color: #00007f; /* Deep blue background, you can adjust the color */
+    border: 2px solid #ffcc00; /* Golden border, similar to LCARS color scheme */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Style for input fields */
+.search-input {
+    background-color: #000080; /* Deep blue, similar to modal background for seamless look */
+    border: 1px solid #ffcc00; /* Golden border for inputs */
+    color: #FFFFFF; /* White text color */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: calc(100% - 22px); /* Adjust width as per padding and border */
+}
+
+/* Style for the search button */
+.search-button {
+    background-color: #ffcc00; /* Golden background for the button */
+    color: #00007f; /* Deep blue text, to contrast with the button */
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    display: block; /* Center the button */
+    margin: 20px auto; /* Space above and below */
+    text-transform: uppercase; /* Capitalize text */
+    font-weight: bold; /* Bold font */
+    border-radius: 5px;
+}
+
+/* For Webkit browsers */
+::-webkit-scrollbar {
+    width: 12px; /* Adjust the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #00007f; /* The track color */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffa500; /* Light-orange color for the thumb */
+    border-radius: 6px; /* Optional: to round the corners of the scrollbar thumb */
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin; /* Can be 'auto', 'thin', or 'none' */
+    scrollbar-color: #ffa500 #00007f; /* Thumb and track color */
+}
+
